@@ -1,0 +1,245 @@
+/* Define CSS Variables */
+:root {
+    --primary: #283897;
+    --secondary: #2A295C;
+    --green: #34A866;
+    --sky-blue: #199CDA;
+    --light-blue: #E7E9F7;
+    --lighter-blue: #F9FAFF;
+    --orange: #EF661A;
+    --yellow: #FCBD4C;
+    --red: #DA2020;
+    --stroke-color: #E0E0E0;
+    --selection: #7E8ACC;
+    --bg-color: #efefee;
+    --white: #ffffff;
+  }
+  
+  /* Dark Theme Overrides */
+  [data-bs-theme="dark"] {
+    --primary: #7E8ACC;    
+    --secondary: #ffffff;
+    --green: #2b8a56;
+    --sky-blue: #1574b3;
+    --light-blue: #2c3e50;
+    --lighter-blue: #1f2833;
+    --orange: #c24f15;
+    --yellow: #d89c38;
+    --red: #b71c1c;
+    --stroke-color: #555;
+    --selection: #5a678a;
+    --bg-color: #121212;
+    --white: #212529;
+  }
+  
+  /* Apply Colors */
+  .color-primary { color: var(--primary); }
+  .color-secondary { color: var(--secondary); }
+  .color-green { color: var(--green); }
+  .color-sky-blue { color: var(--sky-blue); }
+  .color-light-blue { color: var(--light-blue); }
+  .color-lighter-blue { color: var(--lighter-blue); }
+  .color-orange { color: var(--orange); }
+  .color-yellow { color: var(--yellow); }
+  .color-red { color: var(--red); }
+  .color-stroke { color: var(--stroke-color); }
+  .color-selection { color: var(--selection); }
+  .color-bgcolor { color: var(--bg-color); }
+  .color-white { color: var(--white); }
+  
+  /* Background Colors */
+  .bg-primary { background-color: var(--primary); }
+  .bg-secondary { background-color: var(--secondary); }
+  .bg-green { background-color: var(--green); }
+  .bg-sky-blue { background-color: var(--sky-blue); }
+  .bg-light-blue { background-color: var(--light-blue); }
+  .bg-lighter-blue { background-color: var(--lighter-blue); }
+  .bg-orange { background-color: var(--orange); }
+  .bg-yellow { background-color: var(--yellow); }
+  .bg-red { background-color: var(--red); }
+  .bg-stroke { background-color: var(--stroke-color); }
+  .bg-selection { background-color: var(--selection); }
+  .bg-bgcolor { background-color: var(--bg-color); }
+  .bg-white { background-color: var(--white); }
+  
+
+// Typography SCSS Setup
+h1,
+.h1 {
+  font-size: 1.625rem;  //26px        
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem; //24px
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h3,
+.h3 {
+  font-size: 1.375rem; //22px
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;   //20px  
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;  //18px
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;  //16px
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+// Paragraph styles
+p {
+  font-size: 0.875rem; //14px
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+}
+
+.small-text {
+  font-size: 0.75rem;   //12px
+  line-height: 1.5;
+}
+
+.medium-text {
+  font-size: 0.813rem;   //13px
+  line-height: 1.5;
+}
+
+.large-text {
+  font-size: 1rem;  //16px
+  line-height: 1.5;
+}
+
+/*Filter and Button design*/
+.btn-primary {
+  background-color: var(--primary);
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+}
+.btn-normal {
+  color: var(--primary);
+  border: none;
+  background-color: transparent;
+}
+.btn-secondary {
+  background-color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none !important;
+  border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
+.btn-secondary:active {
+  background-color: inherit;
+  color: inherit;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn:active {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+.nav-tabs .nav-link.active {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid var(--primary) !important;
+  color: var(--primary);
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: none;
+  border: none;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+  color: var(--primary);
+}
+
+
+/*Table desing of every components*/
+.table-lightt th {
+  background-color: var(--light-blue);
+  color: var(--secondary);
+  font-weight: 500;
+  padding-left: 20px;
+}
+.table {
+  font-size: 14px;
+}
+
+tbody td {
+  padding-left: 20px !important; // Adjust the value as needed
+  color: var(--secondary) !important;
+  vertical-align: middle;
+}
+
+.card{
+    border: 1px solid var(--light-blue);
+    .card-header{
+        background-color: var(--white);
+        border-bottom: 1px solid var(--light-blue);
+        font-size: 16px;
+        padding: 14px 18px 14px 18px;
+        font-weight: 600;
+        color: var(--secondary);
+    }
+}
+
+.border-bottom{
+    border-bottom: 1px solid var(--light-blue);
+}
+::-webkit-scrollbar {
+  width: 4px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;   
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b6c1c0;    
+  border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b6c1c0; 
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

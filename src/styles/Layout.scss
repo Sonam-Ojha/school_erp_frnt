@@ -1,0 +1,45 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  transition: all 0.25s ease;
+}
+.sidebar-area {
+  flex: 0 0 240px;
+  background: #0f1724;
+  color: #fff;
+  transition: flex-basis 0.25s ease, width 0.25s ease;
+  overflow: hidden;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  transition: all 0.25s ease;
+}
+.header-area {
+  height: 60px;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: #fff;
+}
+.main-area {
+  flex-grow: 1;
+//   padding: 20px;
+  // background: #f1f5f9;
+  overflow-y: auto;
+}
+.app-shell.sidebar-collapsed .sidebar-area {
+  flex: 0 0 72px;
+}
+
+.app-shell.sidebar-collapsed .content-area {
+  flex: 1 1 auto;
+}
+
+.app-shell.sidebar-collapsed .sidebar-area .link-text,
+.app-shell.sidebar-collapsed .sidebar-area .brand-text {
+  display: none;
+}

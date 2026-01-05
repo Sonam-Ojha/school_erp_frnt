@@ -3,7 +3,7 @@ import React from 'react';
 export const DashboardPage = React.lazy(() => import('./pages/Dashboard'));
 export const DailyTaskPage = React.lazy(() => import('./pages/DailyTask'));
 
-export type AppRoute = {
+export type AppRoute = { 
   path: string;
   name: string;
   element: React.LazyExoticComponent<any> | React.ComponentType<any>;

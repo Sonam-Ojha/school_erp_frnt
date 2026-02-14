@@ -1,11 +1,17 @@
 // src/components/Layouts/AuthLayout.tsx
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
 import '../../styles/Layout.scss';
 
 const AuthLayout: React.FC = () => {
+  const token = localStorage.getItem('auth_token');
+
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+
   return (
     <div className="app-shell">
       <div className="sidebar-area">

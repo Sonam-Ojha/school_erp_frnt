@@ -14,7 +14,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await login(username, password);
+      const res = await login({ username, password });
       if (res.status === true) {
         localStorage.setItem('auth_token', res.token);
         onLoginSuccess(); // 👈 tell App that login is successful
@@ -22,8 +22,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
       } else {
         alert(res.msg || 'Login failed');
       }
-    } catch (err:any) {
-       alert(err?.msg || 'Error during login');
+    } catch (err: any) {
+      alert(err?.msg || 'Error during login');
       console.error(err);
     }
   };

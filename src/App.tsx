@@ -39,6 +39,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AuthLayout from './components/Layouts/AuthLayout';
 import LoginForm from './components/Features/auth/LoginForm';
+import RegisterForm from './components/Features/auth/RegisterForm';
 import { appRoutes } from './routesConfig';
 
 
@@ -62,11 +63,19 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-           <Route
+        <Route
           path="/login"
           element={
             <LoginGuard>
               <LoginForm onSuccess={() => { }} />
+            </LoginGuard>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <LoginGuard>
+              <RegisterForm />
             </LoginGuard>
           }
         />
